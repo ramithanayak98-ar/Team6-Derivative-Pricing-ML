@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 430" width="880" height="430" style="background:#ffffff;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif;">
+<text x="440.0" y="28" text-anchor="middle" font-size="15.5" font-weight="bold" fill="#0f172a">Efficacy Benchmark: Option Pricing Error (RMSE / MAE) &amp; R² Across Frameworks</text>
+<rect x="65" y="62" width="360" height="275" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.2"/>
+<text x="245.0" y="52" text-anchor="middle" font-size="12.5" font-weight="bold" fill="#1e293b">(a) Pricing Error: Test RMSE &amp; MAE (Lower ↓)</text>
+<line x1="65" y1="337.0" x2="425" y2="337.0" stroke="#e2e8f0" stroke-dasharray="3,3"/>
+<text x="59" y="341.0" text-anchor="end" font-size="10" fill="#475569">0.0000</text>
+<line x1="65" y1="282.0" x2="425" y2="282.0" stroke="#e2e8f0" stroke-dasharray="3,3"/>
+<text x="59" y="286.0" text-anchor="end" font-size="10" fill="#475569">0.0075</text>
+<line x1="65" y1="227.0" x2="425" y2="227.0" stroke="#e2e8f0" stroke-dasharray="3,3"/>
+<text x="59" y="231.0" text-anchor="end" font-size="10" fill="#475569">0.0150</text>
+<line x1="65" y1="172.0" x2="425" y2="172.0" stroke="#e2e8f0" stroke-dasharray="3,3"/>
+<text x="59" y="176.0" text-anchor="end" font-size="10" fill="#475569">0.0226</text>
+<line x1="65" y1="117.0" x2="425" y2="117.0" stroke="#e2e8f0" stroke-dasharray="3,3"/>
+<text x="59" y="121.0" text-anchor="end" font-size="10" fill="#475569">0.0301</text>
+<line x1="65" y1="62.0" x2="425" y2="62.0" stroke="#e2e8f0" stroke-dasharray="3,3"/>
+<text x="59" y="66.0" text-anchor="end" font-size="10" fill="#475569">0.0376</text>
+<rect x="73.4" y="287.1" width="20.4" height="49.9" fill="#d97706" rx="2"/>
+<text x="83.6" y="282.1" text-anchor="middle" font-size="8.8" font-weight="bold" fill="#0f172a">0.0068</text>
+<rect x="96.8" y="299.0" width="20.4" height="38.0" fill="#d97706" opacity="0.55" rx="2"/>
+<text x="107.0" y="294.0" text-anchor="middle" font-size="8.5" fill="#475569">0.0052</text>
+<text x="93.8" y="353.0" text-anchor="end" font-size="10" font-weight="600" fill="#1e293b" transform="rotate(-28, 93.8, 353.0)">XGBoost</text>
+<rect x="133.4" y="111.6" width="20.4" height="225.4" fill="#dc2626" rx="2"/>
+<text x="143.6" y="106.6" text-anchor="middle" font-size="8.8" font-weight="bold" fill="#0f172a">0.0308</text>
+<rect x="156.8" y="180.9" width="20.4" height="156.1" fill="#dc2626" opacity="0.55" rx="2"/>
+<text x="167.0" y="175.9" text-anchor="middle" font-size="8.5" fill="#475569">0.0213</text>
+<text x="153.8" y="353.0" text-anchor="end" font-size="10" font-weight="600" fill="#1e293b" transform="rotate(-28, 153.8, 353.0)">Keras (TF)</text>
+<rect x="193.4" y="234.2" width="20.4" height="102.8" fill="#2563eb" rx="2"/>
+<text x="203.6" y="229.2" text-anchor="middle" font-size="8.8" font-weight="bold" fill="#0f172a">0.0140</text>
+<rect x="216.8" y="259.5" width="20.4" height="77.5" fill="#2563eb" opacity="0.55" rx="2"/>
+<text x="227.0" y="254.5" text-anchor="middle" font-size="8.5" fill="#475569">0.0106</text>
+<text x="213.8" y="353.0" text-anchor="end" font-size="10" font-weight="600" fill="#1e293b" transform="rotate(-28, 213.8, 353.0)">PyTorch + fastai</text>
+<rect x="253.4" y="155.1" width="20.4" height="181.9" fill="#7c3aed" rx="2"/>
+<text x="263.6" y="150.1" text-anchor="middle" font-size="8.8" font-weight="bold" fill="#0f172a">0.0249</text>
+<rect x="276.8" y="199.6" width="20.4" height="137.4" fill="#7c3aed" opacity="0.55" rx="2"/>
+<text x="287.0" y="194.6" text-anchor="middle" font-size="8.5" fill="#475569">0.0188</text>
+<text x="273.8" y="353.0" text-anchor="end" font-size="10" font-weight="600" fill="#1e293b" transform="rotate(-28, 273.8, 353.0)">PyTorch + TabNet</text>
+<rect x="313.4" y="172.6" width="20.4" height="164.4" fill="#0891b2" rx="2"/>
+<text x="323.6" y="167.6" text-anchor="middle" font-size="8.8" font-weight="bold" fill="#0f172a">0.0225</text>
+<rect x="336.8" y="214.5" width="20.4" height="122.5" fill="#0891b2" opacity="0.55" rx="2"/>
+<text x="347.0" y="209.5" text-anchor="middle" font-size="8.5" fill="#475569">0.0168</text>
+<text x="333.8" y="353.0" text-anchor="end" font-size="10" font-weight="600" fill="#1e293b" transform="rotate(-28, 333.8, 353.0)">PyTorch + Lightning Flash</text>
+<rect x="373.4" y="291.3" width="20.4" height="45.7" fill="#059669" rx="2"/>
+<text x="383.6" y="286.3" text-anchor="middle" font-size="8.8" font-weight="bold" fill="#0f172a">0.0062</text>
+<rect x="396.8" y="302.8" width="20.4" height="34.2" fill="#059669" opacity="0.55" rx="2"/>
+<text x="407.0" y="297.8" text-anchor="middle" font-size="8.5" fill="#475569">0.0047</text>
+<text x="393.8" y="353.0" text-anchor="end" font-size="10" font-weight="600" fill="#1e293b" transform="rotate(-28, 393.8, 353.0)">PI-BSNet (Innovation)</text>
+<rect x="490" y="62" width="360" height="275" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.2"/>
+<text x="670.0" y="52" text-anchor="middle" font-size="12.5" font-weight="bold" fill="#1e293b">(b) Goodness-of-Fit R² (%) &amp; Regime Acc (%) (Higher ↑)</text>
+<line x1="490" y1="337.0" x2="850" y2="337.0" stroke="#e2e8f0" stroke-dasharray="3,3"/>
+<text x="484" y="341.0" text-anchor="end" font-size="10" fill="#475569">90.0%</text>
+<line x1="490" y1="284.6" x2="850" y2="284.6" stroke="#e2e8f0" stroke-dasharray="3,3"/>
+<text x="484" y="288.6" text-anchor="end" font-size="10" fill="#475569">92.0%</text>
+<line x1="490" y1="232.2" x2="850" y2="232.2" stroke="#e2e8f0" stroke-dasharray="3,3"/>
+<text x="484" y="236.2" text-anchor="end" font-size="10" fill="#475569">94.0%</text>
+<line x1="490" y1="179.9" x2="850" y2="179.9" stroke="#e2e8f0" stroke-dasharray="3,3"/>
+<text x="484" y="183.9" text-anchor="end" font-size="10" fill="#475569">96.0%</text>
+<line x1="490" y1="127.5" x2="850" y2="127.5" stroke="#e2e8f0" stroke-dasharray="3,3"/>
+<text x="484" y="131.5" text-anchor="end" font-size="10" fill="#475569">98.0%</text>
+<line x1="490" y1="75.1" x2="850" y2="75.1" stroke="#e2e8f0" stroke-dasharray="3,3"/>
+<text x="484" y="79.1" text-anchor="end" font-size="10" fill="#475569">100.0%</text>
+<rect x="498.4" y="84.5" width="20.4" height="252.5" fill="#d97706" rx="2"/>
+<text x="508.6" y="79.5" text-anchor="middle" font-size="8.8" font-weight="bold" fill="#0f172a">99.64%</text>
+<rect x="521.8" y="98.4" width="20.4" height="238.6" fill="#334155" opacity="0.65" rx="2"/>
+<text x="532.0" y="93.4" text-anchor="middle" font-size="8.5" fill="#334155">99.1%</text>
+<text x="518.8" y="353.0" text-anchor="end" font-size="10" font-weight="600" fill="#1e293b" transform="rotate(-28, 518.8, 353.0)">XGBoost</text>
+<rect x="558.4" y="267.9" width="20.4" height="69.1" fill="#dc2626" rx="2"/>
+<text x="568.6" y="262.9" text-anchor="middle" font-size="8.8" font-weight="bold" fill="#0f172a">92.64%</text>
+<rect x="581.8" y="179.9" width="20.4" height="157.1" fill="#334155" opacity="0.65" rx="2"/>
+<text x="592.0" y="174.9" text-anchor="middle" font-size="8.5" fill="#334155">96.0%</text>
+<text x="578.8" y="353.0" text-anchor="end" font-size="10" font-weight="600" fill="#1e293b" transform="rotate(-28, 578.8, 353.0)">Keras (TF)</text>
+<rect x="618.4" y="115.2" width="20.4" height="221.8" fill="#2563eb" rx="2"/>
+<text x="628.6" y="110.2" text-anchor="middle" font-size="8.8" font-weight="bold" fill="#0f172a">98.47%</text>
+<rect x="641.8" y="145.0" width="20.4" height="192.0" fill="#334155" opacity="0.65" rx="2"/>
+<text x="652.0" y="140.0" text-anchor="middle" font-size="8.5" fill="#334155">97.3%</text>
+<text x="638.8" y="353.0" text-anchor="end" font-size="10" font-weight="600" fill="#1e293b" transform="rotate(-28, 638.8, 353.0)">PyTorch + fastai</text>
+<rect x="678.4" y="200.6" width="20.4" height="136.4" fill="#7c3aed" rx="2"/>
+<text x="688.6" y="195.6" text-anchor="middle" font-size="8.8" font-weight="bold" fill="#0f172a">95.21%</text>
+<rect x="701.8" y="220.7" width="20.4" height="116.3" fill="#334155" opacity="0.65" rx="2"/>
+<text x="712.0" y="215.7" text-anchor="middle" font-size="8.5" fill="#334155">94.4%</text>
+<text x="698.8" y="353.0" text-anchor="end" font-size="10" font-weight="600" fill="#1e293b" transform="rotate(-28, 698.8, 353.0)">PyTorch + TabNet</text>
+<rect x="738.4" y="177.6" width="20.4" height="159.4" fill="#0891b2" rx="2"/>
+<text x="748.6" y="172.6" text-anchor="middle" font-size="8.8" font-weight="bold" fill="#0f172a">96.08%</text>
+<rect x="761.8" y="191.4" width="20.4" height="145.6" fill="#334155" opacity="0.65" rx="2"/>
+<text x="772.0" y="186.4" text-anchor="middle" font-size="8.5" fill="#334155">95.6%</text>
+<text x="758.8" y="353.0" text-anchor="end" font-size="10" font-weight="600" fill="#1e293b" transform="rotate(-28, 758.8, 353.0)">PyTorch + Lightning Flash</text>
+<rect x="798.4" y="83.0" width="20.4" height="254.0" fill="#059669" rx="2"/>
+<text x="808.6" y="78.0" text-anchor="middle" font-size="8.8" font-weight="bold" fill="#0f172a">99.70%</text>
+<rect x="821.8" y="98.4" width="20.4" height="238.6" fill="#334155" opacity="0.65" rx="2"/>
+<text x="832.0" y="93.4" text-anchor="middle" font-size="8.5" fill="#334155">99.1%</text>
+<text x="818.8" y="353.0" text-anchor="end" font-size="10" font-weight="600" fill="#1e293b" transform="rotate(-28, 818.8, 353.0)">PI-BSNet (Innovation)</text>
+</svg>

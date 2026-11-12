@@ -1,0 +1,197 @@
+{
+  "n_total": 3000,
+  "n_train": 2100,
+  "n_val": 450,
+  "n_test": 450,
+  "volatility_equation": "sigma(M, tau) = 0.15 + 0.08 * tau + 0.65 * (M - 1)^2",
+  "summary_statistics": {
+    "moneyness_M": {
+      "mean": 0.9981,
+      "std": 0.20114,
+      "min": 0.65012,
+      "q25": 0.82203,
+      "median": 1.003,
+      "q75": 1.16626,
+      "max": 1.34952,
+      "skewness": -0.0009
+    },
+    "time_to_maturity_tau": {
+      "mean": 1.02616,
+      "std": 0.56139,
+      "min": 0.05017,
+      "q25": 0.53379,
+      "median": 1.02954,
+      "q75": 1.51421,
+      "max": 1.9998,
+      "skewness": 0.0049
+    },
+    "risk_free_rate_r": {
+      "mean": 0.0452,
+      "std": 0.02028,
+      "min": 0.01,
+      "q25": 0.02801,
+      "median": 0.04492,
+      "q75": 0.06336,
+      "max": 0.07998,
+      "skewness": -0.0073
+    },
+    "volatility_sigma": {
+      "mean": 0.25839,
+      "std": 0.05146,
+      "min": 0.15351,
+      "q25": 0.21849,
+      "median": 0.25915,
+      "q75": 0.29693,
+      "max": 0.38387,
+      "skewness": 0.0617
+    },
+    "call_price_norm": {
+      "mean": 0.15681,
+      "std": 0.11403,
+      "min": 0.0,
+      "q25": 0.0601,
+      "median": 0.13498,
+      "q75": 0.24461,
+      "max": 0.4548,
+      "skewness": 0.4698
+    },
+    "intrinsic_norm": {
+      "mean": 0.088,
+      "std": 0.11354,
+      "min": 0.0,
+      "q25": 0.0,
+      "median": 0.0,
+      "q75": 0.17797,
+      "max": 0.34988,
+      "skewness": 0.9153
+    },
+    "time_value_norm": {
+      "mean": 0.06881,
+      "std": 0.05085,
+      "min": 0.0,
+      "q25": 0.02397,
+      "median": 0.06216,
+      "q75": 0.10718,
+      "max": 0.22909,
+      "skewness": 0.5206
+    },
+    "delta": {
+      "mean": 0.60703,
+      "std": 0.28075,
+      "min": 0.0,
+      "q25": 0.40272,
+      "median": 0.62911,
+      "q75": 0.86138,
+      "max": 1.0,
+      "skewness": -0.3662
+    },
+    "gamma": {
+      "mean": 1.21812,
+      "std": 1.00542,
+      "min": 0.0,
+      "q25": 0.65469,
+      "median": 1.0004,
+      "q75": 1.4331,
+      "max": 10.36579,
+      "skewness": 2.9083
+    },
+    "vega": {
+      "mean": 0.28176,
+      "std": 0.16351,
+      "min": 0.0,
+      "q25": 0.14539,
+      "median": 0.29018,
+      "q75": 0.4208,
+      "max": 0.56394,
+      "skewness": -0.125
+    }
+  },
+  "correlation_matrix": {
+    "moneyness_M": {
+      "moneyness_M": 1.0,
+      "time_to_maturity_tau": 0.0405,
+      "risk_free_rate_r": -0.0252,
+      "volatility_sigma": 0.0246,
+      "call_price_norm": -0.8593,
+      "delta": -0.9001,
+      "vega": 0.4327
+    },
+    "time_to_maturity_tau": {
+      "moneyness_M": 0.0405,
+      "time_to_maturity_tau": 1.0,
+      "risk_free_rate_r": -0.0042,
+      "volatility_sigma": 0.8855,
+      "call_price_norm": 0.3705,
+      "delta": 0.1346,
+      "vega": 0.8279
+    },
+    "risk_free_rate_r": {
+      "moneyness_M": -0.0252,
+      "time_to_maturity_tau": -0.0042,
+      "risk_free_rate_r": 1.0,
+      "volatility_sigma": -0.0089,
+      "call_price_norm": 0.0959,
+      "delta": 0.0956,
+      "vega": -0.0364
+    },
+    "volatility_sigma": {
+      "moneyness_M": 0.0246,
+      "time_to_maturity_tau": 0.8855,
+      "risk_free_rate_r": -0.0089,
+      "volatility_sigma": 1.0,
+      "call_price_norm": 0.4694,
+      "delta": 0.1265,
+      "vega": 0.5948
+    },
+    "call_price_norm": {
+      "moneyness_M": -0.8593,
+      "time_to_maturity_tau": 0.3705,
+      "risk_free_rate_r": 0.0959,
+      "volatility_sigma": 0.4694,
+      "call_price_norm": 1.0,
+      "delta": 0.8603,
+      "vega": -0.1327
+    },
+    "delta": {
+      "moneyness_M": -0.9001,
+      "time_to_maturity_tau": 0.1346,
+      "risk_free_rate_r": 0.0956,
+      "volatility_sigma": 0.1265,
+      "call_price_norm": 0.8603,
+      "delta": 1.0,
+      "vega": -0.2053
+    },
+    "vega": {
+      "moneyness_M": 0.4327,
+      "time_to_maturity_tau": 0.8279,
+      "risk_free_rate_r": -0.0364,
+      "volatility_sigma": 0.5948,
+      "call_price_norm": -0.1327,
+      "delta": -0.2053,
+      "vega": 1.0
+    }
+  },
+  "regime_breakdown": {
+    "ITM": {
+      "count": 1286,
+      "percentage": 42.87,
+      "mean_price_norm": 0.26167,
+      "mean_volatility": 0.2624,
+      "mean_delta": 0.87664
+    },
+    "ATM": {
+      "count": 419,
+      "percentage": 13.97,
+      "mean_price_norm": 0.1143,
+      "mean_volatility": 0.23055,
+      "mean_delta": 0.60712
+    },
+    "OTM": {
+      "count": 1295,
+      "percentage": 43.17,
+      "mean_price_norm": 0.06643,
+      "mean_volatility": 0.26343,
+      "mean_delta": 0.33926
+    }
+  }
+}

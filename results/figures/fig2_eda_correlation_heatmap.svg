@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 470" width="760" height="470" style="background:#ffffff;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif;">
+<text x="380.0" y="30" text-anchor="middle" font-size="15.5" font-weight="bold" fill="#0f172a">Exploratory Data Analysis: Feature &amp; Greek Pearson Correlation Matrix</text>
+<text x="145" y="92.0" text-anchor="end" font-size="11.5" font-weight="600" fill="#1e293b">Moneyness (M)</text>
+<rect x="155" y="65" width="74" height="46" fill="#1e5ab9" stroke="#ffffff" stroke-width="1.5"/>
+<text x="192.0" y="92.0" text-anchor="middle" font-size="11" font-weight="bold" fill="#ffffff">+1.00</text>
+<rect x="229" y="65" width="74" height="46" fill="#f5f8fc" stroke="#ffffff" stroke-width="1.5"/>
+<text x="266.0" y="92.0" text-anchor="middle" font-size="11" font-weight="bold" fill="#0f172a">+0.04</text>
+<rect x="303" y="65" width="74" height="46" fill="#fdf9f9" stroke="#ffffff" stroke-width="1.5"/>
+<text x="340.0" y="92.0" text-anchor="middle" font-size="11" font-weight="bold" fill="#0f172a">-0.03</text>
+<rect x="377" y="65" width="74" height="46" fill="#f9fafd" stroke="#ffffff" stroke-width="1.5"/>
+<text x="414.0" y="92.0" text-anchor="middle" font-size="11" font-weight="bold" fill="#0f172a">+0.02</text>
+<rect x="451" y="65" width="74" height="46" fill="#d44a53" stroke="#ffffff" stroke-width="1.5"/>
+<text x="488.0" y="92.0" text-anchor="middle" font-size="11" font-weight="bold" fill="#ffffff">-0.86</text>
+<rect x="525" y="65" width="74" height="46" fill="#d1414a" stroke="#ffffff" stroke-width="1.5"/>
+<text x="562.0" y="92.0" text-anchor="middle" font-size="11" font-weight="bold" fill="#ffffff">-0.90</text>
+<rect x="599" y="65" width="74" height="46" fill="#9db7e0" stroke="#ffffff" stroke-width="1.5"/>
+<text x="636.0" y="92.0" text-anchor="middle" font-size="11" font-weight="bold" fill="#0f172a">+0.43</text>
+<text x="145" y="138.0" text-anchor="end" font-size="11.5" font-weight="600" fill="#1e293b">Maturity (τ)</text>
+<rect x="155" y="111" width="74" height="46" fill="#f5f8fc" stroke="#ffffff" stroke-width="1.5"/>
+<text x="192.0" y="138.0" text-anchor="middle" font-size="11" font-weight="bold" fill="#0f172a">+0.04</text>
+<rect x="229" y="111" width="74" height="46" fill="#1e5ab9" stroke="#ffffff" stroke-width="1.5"/>
+<text x="266.0" y="138.0" text-anchor="middle" font-size="11" font-weight="bold" fill="#ffffff">+1.00</text>
+<rect x="303" y="111" width="74" height="46" fill="#fefefe" stroke="#ffffff" stroke-width="1.5"/>
+<text x="340.0" y="138.0" text-anchor="middle" font-size="11" font-weight="bold" fill="#0f172a">-0.00</text>
+<rect x="377" y="111" width="74" height="46" fill="#376cc1" stroke="#ffffff" stroke-width="1.5"/>
+<text x="414.0" y="138.0" text-anchor="middle" font-size="11" font-weight="bold" fill="#ffffff">+0.89</text>
+<rect x="451" y="111" width="74" height="46" fill="#abc1e5" stroke="#ffffff" stroke-width="1.5"/>
+<text x="488.0" y="138.0" text-anchor="middle" font-size="11" font-weight="bold" fill="#0f172a">+0.37</text>
+<rect x="525" y="111" width="74" height="46" fill="#e0e8f5" stroke="#ffffff" stroke-width="1.5"/>
+<text x="562.0" y="138.0" text-anchor="middle" font-size="11" font-weight="bold" fill="#0f172a">+0.13</text>
+<rect x="599" y="111" width="74" height="46" fill="#4476c5" stroke="#ffffff" stroke-width="1.5"/>
+<text x="636.0" y="138.0" text-anchor="middle" font-size="11" font-weight="bold" fill="#ffffff">+0.83</text>
+<text x="145" y="184.0" text-anchor="end" font-size="11.5" font-weight="600" fill="#1e293b">Risk-Free (r)</text>
+<rect x="155" y="157" width="74" height="46" fill="#fdf9f9" stroke="#ffffff" stroke-width="1.5"/>
+<text x="192.0" y="184.0" text-anchor="middle" font-size="11" font-weight="bold" fill="#0f172a">-0.03</text>
+<rect x="229" y="157" width="74" height="46" fill="#fefefe" stroke="#ffffff" stroke-width="1.5"/>
+<text x="266.0" y="184.0" text-anchor="middle" font-size="11" font-weight="bold" fill="#0f172a">-0.00</text>
+<rect x="303" y="157" width="74" height="46" fill="#1e5ab9" stroke="#ffffff" stroke-width="1.5"/>
+<text x="340.0" y="184.0" text-anchor="middle" font-size="11" font-weight="bold" fill="#ffffff">+1.00</text>
+<rect x="377" y="157" width="74" height="46" fill="#fefdfd" stroke="#ffffff" stroke-width="1.5"/>
+<text x="414.0" y="184.0" text-anchor="middle" font-size="11" font-weight="bold" fill="#0f172a">-0.01</text>
+<rect x="451" y="157" width="74" height="46" fill="#e9eff8" stroke="#ffffff" stroke-width="1.5"/>
+<text x="488.0" y="184.0" text-anchor="middle" font-size="11" font-weight="bold" fill="#0f172a">+0.10</text>
+<rect x="525" y="157" width="74" height="46" fill="#e9eff8" stroke="#ffffff" stroke-width="1.5"/>
+<text x="562.0" y="184.0" text-anchor="middle" font-size="11" font-weight="bold" fill="#0f172a">+0.10</text>
+<rect x="599" y="157" width="74" height="46" fill="#fdf7f7" stroke="#ffffff" stroke-width="1.5"/>
+<text x="636.0" y="184.0" text-anchor="middle" font-size="11" font-weight="bold" fill="#0f172a">-0.04</text>
+<text x="145" y="230.0" text-anchor="end" font-size="11.5" font-weight="600" fill="#1e293b">Volatility (σ)</text>
+<rect x="155" y="203" width="74" height="46" fill="#f9fafd" stroke="#ffffff" stroke-width="1.5"/>
+<text x="192.0" y="230.0" text-anchor="middle" font-size="11" font-weight="bold" fill="#0f172a">+0.02</text>
+<rect x="229" y="203" width="74" height="46" fill="#376cc1" stroke="#ffffff" stroke-width="1.5"/>
+<text x="266.0" y="230.0" text-anchor="middle" font-size="11" font-weight="bold" fill="#ffffff">+0.89</text>
+<rect x="303" y="203" width="74" height="46" fill="#fefdfd" stroke="#ffffff" stroke-width="1.5"/>
+<text x="340.0" y="230.0" text-anchor="middle" font-size="11" font-weight="bold" fill="#0f172a">-0.01</text>
+<rect x="377" y="203" width="74" height="46" fill="#1e5ab9" stroke="#ffffff" stroke-width="1.5"/>
+<text x="414.0" y="230.0" text-anchor="middle" font-size="11" font-weight="bold" fill="#ffffff">+1.00</text>
+<rect x="451" y="203" width="74" height="46" fill="#95b1de" stroke="#ffffff" stroke-width="1.5"/>
+<text x="488.0" y="230.0" text-anchor="middle" font-size="11" font-weight="bold" fill="#0f172a">+0.47</text>
+<rect x="525" y="203" width="74" height="46" fill="#e2eaf6" stroke="#ffffff" stroke-width="1.5"/>
+<text x="562.0" y="230.0" text-anchor="middle" font-size="11" font-weight="bold" fill="#0f172a">+0.13</text>
+<rect x="599" y="203" width="74" height="46" fill="#799cd5" stroke="#ffffff" stroke-width="1.5"/>
+<text x="636.0" y="230.0" text-anchor="middle" font-size="11" font-weight="bold" fill="#ffffff">+0.59</text>
+<text x="145" y="276.0" text-anchor="end" font-size="11.5" font-weight="600" fill="#1e293b">Option Price (C/S)</text>
+<rect x="155" y="249" width="74" height="46" fill="#d44a53" stroke="#ffffff" stroke-width="1.5"/>
+<text x="192.0" y="276.0" text-anchor="middle" font-size="11" font-weight="bold" fill="#ffffff">-0.86</text>
+<rect x="229" y="249" width="74" height="46" fill="#abc1e5" stroke="#ffffff" stroke-width="1.5"/>
+<text x="266.0" y="276.0" text-anchor="middle" font-size="11" font-weight="bold" fill="#0f172a">+0.37</text>
+<rect x="303" y="249" width="74" height="46" fill="#e9eff8" stroke="#ffffff" stroke-width="1.5"/>
+<text x="340.0" y="276.0" text-anchor="middle" font-size="11" font-weight="bold" fill="#0f172a">+0.10</text>
+<rect x="377" y="249" width="74" height="46" fill="#95b1de" stroke="#ffffff" stroke-width="1.5"/>
+<text x="414.0" y="276.0" text-anchor="middle" font-size="11" font-weight="bold" fill="#0f172a">+0.47</text>
+<rect x="451" y="249" width="74" height="46" fill="#1e5ab9" stroke="#ffffff" stroke-width="1.5"/>
+<text x="488.0" y="276.0" text-anchor="middle" font-size="11" font-weight="bold" fill="#ffffff">+1.00</text>
+<rect x="525" y="249" width="74" height="46" fill="#3d71c2" stroke="#ffffff" stroke-width="1.5"/>
+<text x="562.0" y="276.0" text-anchor="middle" font-size="11" font-weight="bold" fill="#ffffff">+0.86</text>
+<rect x="599" y="249" width="74" height="46" fill="#f8e3e4" stroke="#ffffff" stroke-width="1.5"/>
+<text x="636.0" y="276.0" text-anchor="middle" font-size="11" font-weight="bold" fill="#0f172a">-0.13</text>
+<text x="145" y="322.0" text-anchor="end" font-size="11.5" font-weight="600" fill="#1e293b">Delta (Δ)</text>
+<rect x="155" y="295" width="74" height="46" fill="#d1414a" stroke="#ffffff" stroke-width="1.5"/>
+<text x="192.0" y="322.0" text-anchor="middle" font-size="11" font-weight="bold" fill="#ffffff">-0.90</text>
+<rect x="229" y="295" width="74" height="46" fill="#e0e8f5" stroke="#ffffff" stroke-width="1.5"/>
+<text x="266.0" y="322.0" text-anchor="middle" font-size="11" font-weight="bold" fill="#0f172a">+0.13</text>
+<rect x="303" y="295" width="74" height="46" fill="#e9eff8" stroke="#ffffff" stroke-width="1.5"/>
+<text x="340.0" y="322.0" text-anchor="middle" font-size="11" font-weight="bold" fill="#0f172a">+0.10</text>
+<rect x="377" y="295" width="74" height="46" fill="#e2eaf6" stroke="#ffffff" stroke-width="1.5"/>
+<text x="414.0" y="322.0" text-anchor="middle" font-size="11" font-weight="bold" fill="#0f172a">+0.13</text>
+<rect x="451" y="295" width="74" height="46" fill="#3d71c2" stroke="#ffffff" stroke-width="1.5"/>
+<text x="488.0" y="322.0" text-anchor="middle" font-size="11" font-weight="bold" fill="#ffffff">+0.86</text>
+<rect x="525" y="295" width="74" height="46" fill="#1e5ab9" stroke="#ffffff" stroke-width="1.5"/>
+<text x="562.0" y="322.0" text-anchor="middle" font-size="11" font-weight="bold" fill="#ffffff">+1.00</text>
+<rect x="599" y="295" width="74" height="46" fill="#f4d3d5" stroke="#ffffff" stroke-width="1.5"/>
+<text x="636.0" y="322.0" text-anchor="middle" font-size="11" font-weight="bold" fill="#0f172a">-0.21</text>
+<text x="145" y="368.0" text-anchor="end" font-size="11.5" font-weight="600" fill="#1e293b">Vega (ν)</text>
+<rect x="155" y="341" width="74" height="46" fill="#9db7e0" stroke="#ffffff" stroke-width="1.5"/>
+<text x="192.0" y="368.0" text-anchor="middle" font-size="11" font-weight="bold" fill="#0f172a">+0.43</text>
+<rect x="229" y="341" width="74" height="46" fill="#4476c5" stroke="#ffffff" stroke-width="1.5"/>
+<text x="266.0" y="368.0" text-anchor="middle" font-size="11" font-weight="bold" fill="#ffffff">+0.83</text>
+<rect x="303" y="341" width="74" height="46" fill="#fdf7f7" stroke="#ffffff" stroke-width="1.5"/>
+<text x="340.0" y="368.0" text-anchor="middle" font-size="11" font-weight="bold" fill="#0f172a">-0.04</text>
+<rect x="377" y="341" width="74" height="46" fill="#799cd5" stroke="#ffffff" stroke-width="1.5"/>
+<text x="414.0" y="368.0" text-anchor="middle" font-size="11" font-weight="bold" fill="#ffffff">+0.59</text>
+<rect x="451" y="341" width="74" height="46" fill="#f8e3e4" stroke="#ffffff" stroke-width="1.5"/>
+<text x="488.0" y="368.0" text-anchor="middle" font-size="11" font-weight="bold" fill="#0f172a">-0.13</text>
+<rect x="525" y="341" width="74" height="46" fill="#f4d3d5" stroke="#ffffff" stroke-width="1.5"/>
+<text x="562.0" y="368.0" text-anchor="middle" font-size="11" font-weight="bold" fill="#0f172a">-0.21</text>
+<rect x="599" y="341" width="74" height="46" fill="#1e5ab9" stroke="#ffffff" stroke-width="1.5"/>
+<text x="636.0" y="368.0" text-anchor="middle" font-size="11" font-weight="bold" fill="#ffffff">+1.00</text>
+<text x="192.0" y="405" text-anchor="end" font-size="11" font-weight="600" fill="#1e293b" transform="rotate(-30, 192.0, 405)">Moneyness (M)</text>
+<text x="266.0" y="405" text-anchor="end" font-size="11" font-weight="600" fill="#1e293b" transform="rotate(-30, 266.0, 405)">Maturity (τ)</text>
+<text x="340.0" y="405" text-anchor="end" font-size="11" font-weight="600" fill="#1e293b" transform="rotate(-30, 340.0, 405)">Risk-Free (r)</text>
+<text x="414.0" y="405" text-anchor="end" font-size="11" font-weight="600" fill="#1e293b" transform="rotate(-30, 414.0, 405)">Volatility (σ)</text>
+<text x="488.0" y="405" text-anchor="end" font-size="11" font-weight="600" fill="#1e293b" transform="rotate(-30, 488.0, 405)">Option Price (C/S)</text>
+<text x="562.0" y="405" text-anchor="end" font-size="11" font-weight="600" fill="#1e293b" transform="rotate(-30, 562.0, 405)">Delta (Δ)</text>
+<text x="636.0" y="405" text-anchor="end" font-size="11" font-weight="600" fill="#1e293b" transform="rotate(-30, 636.0, 405)">Vega (ν)</text>
+</svg>

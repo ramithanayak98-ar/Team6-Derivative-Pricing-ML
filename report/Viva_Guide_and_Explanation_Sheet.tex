@@ -1,0 +1,122 @@
+\documentclass[10pt]{article}
+\usepackage[margin=0.65in,top=0.68in,bottom=0.68in]{geometry}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usepackage{hyperref}
+
+\definecolor{navy}{RGB}{15,44,89}
+\definecolor{royal}{RGB}{30,90,168}
+\definecolor{crimson}{RGB}{190,30,45}
+\definecolor{teal}{RGB}{0,128,115}
+\definecolor{purple}{RGB}{109,40,217}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{4pt}
+
+\begin{document}
+\sffamily
+
+\begin{center}
+    {\LARGE\bfseries\color{navy} Team 6 Presentation Speaking Script \& Complete Viva Q\&A Guide}\\[0.18cm]
+    {\large\bfseries Machine Learning Model for Derivative Pricing (Black-Scholes \& Volatility Smile)}\\[0.15cm]
+    {\small\textbf{1. Ramitha MV (\texttt{PES1UG24AM392})} \quad|\quad \textbf{2. Gayathri Priya V (\texttt{PES1UG24AM105})} \quad|\quad \textbf{3. Gonu Guntla Hema Kowshik (\texttt{PES1UG24AM106})}}
+\end{center}
+\hrule height 1pt
+\vspace{0.18cm}
+
+\section*{\color{royal}Part 1: Slide-by-Slide Speaking Script (Balanced for 3 Team Members)}
+
+\subsection*{\color{navy}Speaker 1: Ramitha MV (\texttt{PES1UG24AM392}) --- Slides 1 to 3 (Introduction \& Math Formulation)}
+\begin{enumerate}
+    \item \textbf{Slide 1 (Title Slide):}
+    ``Good morning/afternoon Sir/Ma'am. We are \textbf{Team 6}: I am \textbf{Ramitha MV (\texttt{PES1UG24AM392})}, along with \textbf{Gayathri Priya V (\texttt{PES1UG24AM105})} and \textbf{Gonu Guntla Hema Kowshik (\texttt{PES1UG24AM106})}. Our Jackfruit project for Business Data is \textbf{Machine Learning Models for Derivative Pricing}, where we train and benchmark five tabular ML and deep learning frameworks---plus our Physics-Informed No-Arbitrage network---to learn the Black-Scholes option pricing model under a non-flat volatility smile.''
+
+    \item \textbf{Slide 2 (Why ML for Derivative Pricing?):}
+    ``In quantitative finance, traditional numerical methods like Monte Carlo simulation, finite differences, and Fourier transforms are used to value derivatives. However, classical Black-Scholes relies on strict assumptions like \textbf{Geometric Brownian Motion (GBM)}, constant volatility, and zero market frictions---which are violated in real markets. Furthermore, calibrating parameters across thousands of traded option strikes is computationally expensive for real-time high-frequency risk management. Machine learning solves both problems: it learns subtle nonlinearities with minimal theoretical assumptions and, once trained on CPUs or GPUs, prices an entire option chain in milliseconds.''
+
+    \item \textbf{Slide 3 (Mathematical Formulation \& Equation 5-2 Volatility Smile):}
+    ``On Slide 3, we start from the general Black-Scholes call option formula $C = S e^{-q\tau}\Phi(d_1) - e^{-r\tau}K\Phi(d_2)$. Following Page 3 of the case study, we simplify the pricing logic by defining \textbf{Moneyness as $M = K/S$}, setting dividend yield $q = 0$, and normalizing the option price per unit of stock price ($c = C/S$). Crucially, in real options markets, implied volatility is not a single constant---it exhibits a \textbf{Volatility Smile/Skew}. We implement \textbf{Equation 5-2}: $\sigma(M,\tau) = \sigma_0 + \alpha\tau + \beta(M-1)^2$, where volatility increases linearly with maturity $\tau$ and quadratically as moneyness $M$ moves away from $1$. Now Gayathri will present our dataset, EDA, and the first three frameworks.''
+\end{enumerate}
+
+\subsection*{\color{navy}Speaker 2: Gayathri Priya V (\texttt{PES1UG24AM105}) --- Slides 4 \& 5 (EDA \& XGBoost, Keras, Fastai)}
+\begin{enumerate}
+    \setcounter{enumi}{3}
+    \item \textbf{Slide 4 (Dataset Generation \& Exploratory Data Analysis):}
+    ``Thank you Ramitha. I am \textbf{Gayathri Priya V (\texttt{PES1UG24AM105})}. We simulated \textbf{3,000 option contracts} split into 2,100 training, 450 validation, and 450 test contracts across Moneyness $M \in [0.65, 1.35]$, Maturity $\tau \in [0.05, 2.0]$ years, and Risk-Free Rate $r \in [1\%, 8\%]$.
+    Our EDA reveals three key financial patterns:
+    First, \textbf{Moneyness $M = K/S$ has a strong negative correlation ($r = -0.8593$)} with normalized Call Price $C/S$ and $-0.9001$ with Option Delta $\Delta$, because higher strike $K$ relative to spot $S$ makes a call option less likely to finish in the money.
+    Second, \textbf{Maturity $\tau$ correlates positively ($r = +0.8691$)} with implied volatility $\sigma$ and $+0.7611$ with Option Vega.
+    Third, we segmented the dataset into three moneyness regimes for our classification task: \textbf{In-The-Money ($M < 0.95$, 42.83\%)}, \textbf{At-The-Money ($0.95 \le M \le 1.05$, 14.07\%)}, and \textbf{Out-Of-The-Money ($M > 1.05$, 43.10\%)}.''
+
+    \item \textbf{Slide 5 (Methodology --- XGBoost, Keras, and PyTorch + fastai):}
+    ``On Slide 5, we detail the first three frameworks:
+    First, \textbf{XGBoost} builds an ensemble of 75 second-order gradient boosted decision trees ($\text{depth}=4$) using exact quantile split gains. It requires zero feature scaling and trains in just \textbf{3.56 seconds}.
+    Second, \textbf{Keras (TensorFlow)} implements a Sequential Dense Multi-Layer Perceptron with ReLU activations and Adam optimization. While simple to build, standard dense layers act as a black box.
+    Third, \textbf{PyTorch with fastai} uses \texttt{TabularLearner} with continuous layer normalization, residual skip connections, GELU activations, and \textbf{Smith's 1-Cycle Policy} (30\% warmup + 70\% cosine annealing), achieving super-convergence on smooth option surfaces. Now Hema Kowshik will cover TabNet, Lightning Flash, our PI-BSNet innovation, and the benchmark comparison.''
+\end{enumerate}
+
+\subsection*{\color{navy}Speaker 3: Gonu Guntla Hema Kowshik (\texttt{PES1UG24AM106}) --- Slides 6 to 9 (TabNet, Flash, Innovation \& Results)}
+\begin{enumerate}
+    \setcounter{enumi}{5}
+    \item \textbf{Slide 6 (Methodology --- TabNet, Lightning Flash, and PI-BSNet Innovation):}
+    ``Thank you Gayathri. I am \textbf{Gonu Guntla Hema Kowshik (\texttt{PES1UG24AM106})}.
+    Our fourth framework is \textbf{PyTorch with TabNet}, which uses sequential attentive transformers and a \textbf{Sparsemax feature mask} that projects feature weights onto the probability simplex---giving us instance-level explainability.
+    Our fifth framework is \textbf{PyTorch with Lightning Flash}, which uses a task-centric \texttt{TabularRegressor} with Gated Residual Highway blocks ($a_2 = \text{GELU}(z_2) + 0.5 a_1$).
+    Finally, to fulfill the case study note on creativity and innovation, we created \textbf{PI-BSNet (Physics-Informed Black-Scholes Network)}. Standard neural networks trained only with MSE often predict slight negative prices on deep OTM options, violating \textbf{Merton's No-Arbitrage Lower Bound} $C/S \ge \max(0, 1 - M e^{-r\tau})$. PI-BSNet embeds this financial constraint directly into training and prediction.''
+
+    \item \textbf{Slide 7 (Quantitative Results --- RMSE, $R^2$, MAE, and Regime Classification):}
+    ``On Slide 7, we compare all models on the 450 unseen test contracts:
+    Among the 5 standard frameworks, \textbf{XGBoost} achieves the best accuracy with \textbf{Test RMSE $= 0.00681$}, \textbf{MAE $= 0.00518$}, \textbf{$R^2 = 0.99640$ (99.64\%)}, and \textbf{99.11\% Regime Classification Accuracy}.
+    Among the pure deep learning frameworks, \textbf{PyTorch + fastai} is the clear winner with \textbf{RMSE $= 0.01405$} and \textbf{$R^2 = 0.98470$}, cutting pricing error by \textbf{54.4\%} compared to standard Keras ($\text{RMSE} = 0.03081, R^2 = 0.92639$), followed by \textbf{Lightning Flash} ($R^2 = 0.96085$) and \textbf{TabNet} ($R^2 = 0.95208$).
+    Overall, our \textbf{PI-BSNet Innovation} achieves the best performance across the board: \textbf{Test RMSE $= 0.00624$}, \textbf{MAE $= 0.00468$}, \textbf{$R^2 = 0.99698$ (99.70\%)}, and \textbf{100.00\% No-Arbitrage Compliance}.''
+
+    \item \textbf{Slide 8 \& 9 (Simplicity, Transparency, Efficacy \& Conclusion):}
+    ``On Slide 8, we summarize the required comparison across Simplicity, Transparency, and Efficacy:
+    $\bullet$ \textbf{Simplicity Winner:} \textbf{XGBoost (9.5/10)} at just 12 lines of code, followed by \textbf{fastai (9.0/10)} at 16 LOC.
+    $\bullet$ \textbf{Transparency Winner:} \textbf{PyTorch + TabNet (9.6/10)}, whose Sparsemax attention automatically assigns \textbf{0.00\% weight} to redundant rate features ($r, e^{-r\tau}$) and highlights Intrinsic Payoff ($29.0\%$), Moneyness $M$ ($21.4\%$), $\ln(M)$ ($16.8\%$), and $\sigma\sqrt{\tau}$ ($14.4\%$).
+    $\bullet$ \textbf{Efficacy Winner:} \textbf{PI-BSNet (9.8/10)} and \textbf{XGBoost (9.4/10)}.
+    All code, dataset CSVs, SVG plots, pre-executed Jupyter notebook, and IEEE report are checked into our GitHub repository. Thank you!''
+\end{enumerate}
+
+\newpage
+\section*{\color{royal}Part 2: Top 10 Viva Questions \& Crisp Answers for Team 6}
+
+\begin{enumerate}
+    \item \textbf{\color{crimson}Q1: Why did the case study define Moneyness as $M = K/S$ and divide the option price by Stock Price $S$?}\\
+    \textbf{Answer:} Because the Black-Scholes call pricing function $C(S, K, \tau, r, \sigma)$ is \textbf{homogeneous of degree 1} with respect to Spot Price $S$ and Strike Price $K$. By defining $M = K/S$ and predicting $c = C/S$, we reduce the input space dimension by one variable and make the ML model \textbf{scale-invariant}---meaning the same trained model can price an option on a \$50 stock or a \$5,000 index!
+
+    \item \textbf{\color{crimson}Q2: Why is correlation between Moneyness $M = K/S$ and Call Price $C/S$ negative ($-0.8593$)?}\\
+    \textbf{Answer:} Here $M = K/S$ is the Strike-to-Spot ratio. For a \textbf{Call Option}, the holder has the right to buy at strike $K$. When $K$ is much larger than $S$ ($M > 1$), the call option is \textbf{Out-Of-The-Money (OTM)} and has a low price. When $K$ is smaller than $S$ ($M < 1$), the call option is \textbf{In-The-Money (ITM)} and has a high price. Hence, as $M = K/S$ increases, call price decreases.
+
+    \item \textbf{\color{crimson}Q3: Explain Equation 5-2: $\sigma(M, \tau) = \sigma_0 + \alpha\tau + \beta(M - 1)^2$. What is the Volatility Smile?}\\
+    \textbf{Answer:} Classical Black-Scholes assumes constant volatility $\sigma$ across all strikes. In reality, market traders demand higher implied volatility for deep ITM ($M \ll 1$) and deep OTM ($M \gg 1$) options due to crash risk and fat tails. Equation 5-2 models this via a parabola $(M-1)^2$ centered at $M=1$ (ATM) with curvature $\beta = 0.65$, plus a linear maturity term $\alpha\tau$ ($0.08\tau$) representing term-structure uncertainty over longer horizons.
+
+    \item \textbf{\color{crimson}Q4: The task list mentions ``Perform classification using the frameworks'' as well as ``RMSE, $R^2$, MAE''. How did you address both?}\\
+    \textbf{Answer:} Derivative pricing is primarily a \textbf{supervised continuous regression} task (evaluated via RMSE, MAE, $R^2$, and MAPE on $C/S$). To also fulfill the \textbf{classification} requirement rigorously, we evaluated all frameworks on classifying options into their three fundamental trading regimes---\textbf{In-The-Money (ITM, $M < 0.95$)}, \textbf{At-The-Money (ATM, $0.95 \le M \le 1.05$)}, and \textbf{Out-Of-The-Money (OTM, $M > 1.05$)}---achieving up to \textbf{99.11\% accuracy} (Macro-F1 $= 98.48\%$).
+
+    \item \textbf{\color{crimson}Q5: Why did XGBoost outperform the pure neural networks (Keras, TabNet, Flash) on tabular option data?}\\
+    \textbf{Answer:} Decision trees partition continuous tabular features ($M$, $\max(1-M,0)$, $\tau$) using sharp axis-aligned quantile splits and second-order Newton-Raphson leaf weights. On low-dimensional structured tabular datasets ($d=8$), gradient boosted trees capture sharp kinks (like the intrinsic payoff kink at $M=1$) much faster than standard MLPs.
+
+    \item \textbf{\color{crimson}Q6: Among the deep learning frameworks, why did PyTorch + fastai ($R^2 = 0.9847$) beat Keras ($R^2 = 0.9264$)?}\\
+    \textbf{Answer:} Three architectural reasons: (1) Fastai uses \textbf{Smith's 1-Cycle Policy} (warming up the learning rate to escape saddle points before cosine annealing), (2) Fastai incorporates \textbf{continuous layer normalization and linear skip connections}, and (3) GELU activations provide smoother second derivatives than ReLU.
+
+    \item \textbf{\color{crimson}Q7: How does PyTorch + TabNet achieve the highest Transparency score (9.6/10)?}\\
+    \textbf{Answer:} Unlike standard neural networks where every input feature is multiplied into dense weight matrices, TabNet uses an \textbf{Attentive Transformer with a Sparsemax activation} at each decision step. Because $\text{sparsemax}(z)$ projects scores onto the Euclidean probability simplex, small weights are truncated to \textbf{exact zero ($0.00\%$)}, producing an interpretable instance-by-instance feature mask without needing slow post-hoc SHAP calculations.
+
+    \item \textbf{\color{crimson}Q8: What is PyTorch Lightning Flash and how does it differ from raw PyTorch?}\\
+    \textbf{Answer:} Raw PyTorch requires writing custom \texttt{Dataset}, \texttt{DataLoader}, training loops, optimizer steps, and device placement ($\sim 80+$ LOC). \textbf{Lightning Flash} is a high-level task hub built on PyTorch Lightning where \texttt{TabularRegressionData.from\_csv()} and \texttt{TabularRegressor} encapsulate the entire Gated Residual Highway backbone and training loop in 18 lines of code.
+
+    \item \textbf{\color{crimson}Q9: What was your team's creative innovation (PI-BSNet) and why is it important in finance?}\\
+    \textbf{Answer:} Standard ML models minimize statistical MSE without knowing financial laws; on deep OTM options ($M > 1.25$) where true prices are near zero, standard neural networks often predict small negative prices or prices below intrinsic value ($92\%$--$95.5\%$ no-arbitrage compliance). In finance, a price below $\max(0, 1 - Me^{-r\tau})$ violates \textbf{Merton's No-Arbitrage Theorem}, allowing riskless profit. Our \textbf{PI-BSNet} enforces this no-arbitrage bound during training and inference, achieving \textbf{100.00\% compliance} and the best overall \textbf{RMSE ($0.00624$)} and \textbf{$R^2$ ($0.99698$)}.
+
+    \item \textbf{\color{crimson}Q10: What are the ``Option Greeks'' ($\Delta, \Gamma, \mathcal{V}$) in your EDA and why do traders care about them?}\\
+    \textbf{Answer:} Greeks measure sensitivities for hedging:
+    $\bullet$ \textbf{Delta ($\Delta = \partial C / \partial S = \Phi(d_1)$):} How much the option price changes per \$1 change in stock price (used for Delta-hedging).
+    $\bullet$ \textbf{Gamma ($\Gamma = \partial^2 C / \partial S^2$):} Curvature of option price (peaks sharply at $M=1$ ATM).
+    $\bullet$ \textbf{Vega ($\mathcal{V} = \partial C / \partial \sigma$):} Sensitivity to implied volatility smile shifts.
+\end{enumerate}
+
+\end{document}
